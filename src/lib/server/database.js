@@ -2,7 +2,7 @@
 import postgres from 'postgres'
 
 // see env variables in .env
-import { DATABASE_URL } from '$env/static/private';
+import { DATABASE_URL } from '$env/dynamic/private';
 
 
 const sql = postgres(DATABASE_URL);
