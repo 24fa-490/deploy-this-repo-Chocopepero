@@ -1,11 +1,10 @@
+import * as env from '$env/dynamic/private'; // Import all dynamic environment variables
 
-import * as env from '$env/dynamic/private';
-import postgres from 'postgres'
+const DATABASE_URL = env.DATABASE_URL; // Access the DATABASE_URL from the environment
 
-// see env variables in .env
-import { DATABASE_URL } from env.DATABASE_URL;
+// Use it for initializing PostgreSQL connection
+import postgres from 'postgres';
 
-
-const sql = postgres(DATABASE_URL);
+const sql = postgres(DATABASE_URL); // Initialize PostgreSQL connection using DATABASE_URL
 
 export default sql;
