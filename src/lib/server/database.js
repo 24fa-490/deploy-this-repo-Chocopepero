@@ -1,5 +1,4 @@
-import env from { DATABASE_URL}
-const DATABASE_URL = env.DATABASE_URL; // Access the DATABASE_URL from the environment
+const DATABASE_URL = process.env.DATABASE_URL;
 
 // Use it for initializing PostgreSQL connection
 import postgres from 'postgres';
