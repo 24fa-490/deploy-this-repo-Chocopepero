@@ -1,9 +1,8 @@
+const DATABASE_URL = process.env.DATABASE_URL;
 
-import postgres from 'postgres'
+// Use it for initializing PostgreSQL connection
+import postgres from 'postgres';
 
-// see env variables in .env
-import {PGCONNECT} from '$env/static/private';
-
-const sql = postgres(PGCONNECT, {} )
+const sql = postgres(DATABASE_URL); // Initialize PostgreSQL connection using DATABASE_URL
 
 export default sql;

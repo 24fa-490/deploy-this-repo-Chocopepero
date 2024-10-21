@@ -7,7 +7,8 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
+		"format": "prettier --write .",
+		"start": "node build"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "^3.0.0",
@@ -25,6 +26,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-node": "^5.2.8",
 		"postgres": "^3.4.4",
 		"vite-plugin-mkcert": "^1.17.5"
 	}
